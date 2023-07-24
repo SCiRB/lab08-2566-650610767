@@ -1,3 +1,8 @@
+import { Footer } from "../../component/Footer";
+import { Header } from "../../component/Header";
+import { Task } from "../../component/Task";
+import { TaskInput } from "../../component/TaskInput";
+
 export default function Home() {
   return (
     // Main container
@@ -10,6 +15,8 @@ export default function Home() {
         </p>
       </div>
 
+      {/* Header section */}
+      <Header></Header>
       {/* tasks container */}
       <div style={{ maxWidth: "400px" }} className="mx-auto">
         {/* task input */}
@@ -20,24 +27,28 @@ export default function Home() {
           ></input>
           <button className="btn btn-primary">Add</button>
         </div>
+        <TaskInput></TaskInput>
         {/* task */}
         <div className="d-flex p-3 gap-2 align-items-center border-bottom">
           <span>Read a book</span>
           <button className="btn btn-success">Done</button>
           <button className="btn btn-danger">Delete</button>
         </div>
+        <Task title="Read a book"></Task>
         {/* task */}
         <div className="d-flex p-3 gap-2 align-items-center border-bottom">
           <span>Take a shower</span>
           <button className="btn btn-success">Done</button>
           <button className="btn btn-danger">Delete</button>
         </div>
+        <Task title="Take a shower"></Task>
         {/* task */}
         <div className="d-flex p-3 gap-2 align-items-center border-bottom">
           <span>Sleep</span>
           <button className="btn btn-success">Done</button>
           <button className="btn btn-danger">Delete</button>
         </div>
+        <Task title="Sleep"></Task>
       </div>
 
       {/* //footer section */}
@@ -46,6 +57,11 @@ export default function Home() {
           copyright © 2023 Chayanin Suatap 12345678
         </p>
       </div>
+      <Footer
+        year="2023"
+        fullname="Poottipong Kunang"
+        studentId="650612095"
+      ></Footer>
     </div>
   );
 }
